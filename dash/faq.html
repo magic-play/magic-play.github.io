@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Magic-palay - Rooms</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <!-- Custom styles for this template -->
+  <link href="/assets/css/dashboard.css" rel="stylesheet">
+
+<style>
+   .php-email-form button[type="submit"] {
+    background: #3498db;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+ .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+ .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+ .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+ .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+ .php-email-form input,  .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+ .php-email-form input,  .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading bg-dark text-light">Magic-Play </div>
+      <div class="list-group list-group-flush">
+        <a href="./" class="list-group-item list-group-item-action bg-light"><i class="icofont-home"></i> Головна</a>
+        <a href="rooms" class="list-group-item list-group-item-action bg-light"><i class="icofont-ui-game"></i> Кімнати</a>
+        <a href="referral" class="list-group-item list-group-item-action bg-light"><i class="icofont-people"></i> Реферали</a>
+        <a href="payment" class="list-group-item list-group-item-action bg-light"><i class="icofont-dollar-plus"></i>Поповнення рахунку</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light"><i class="icofont-support-faq"></i> Надіслати запитання</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand navbar-dark bg-dark border-bottom">
+        <button class="btn btn-info d-md-none" id="menu-toggle">Menu</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="payment"><i class="icofont-dollar-plus"><span id="money">??грн</span></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="logout_dash()" href="#"><i class="icofont-logout"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <!-- container -->
+        <h1 class="mt-4">Magic-Play FAQ</h1>
+        <br>
+        <form action="https://script.google.com/macros/s/AKfycbyABkk0kTD-cAIMc3jdVPk0e7Bn1Jb4S1IX7_8Et0048rO9ZQ/exec" method="GET" role="form" class="php-email-form">
+                        <input type="hidden" name="f" value="m">
+                        <div class="form-group">
+                           <input type="email" class="form-control" name="from" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                           <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                           <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                           <textarea class="form-control" name="m" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                           <div class="validate"></div>
+                        </div>
+                        <div class="mb-3">
+                           <div class="loading">Loading</div>
+                           <div class="error-message"></div>
+                           <div class="sent-message">Повідомлення надісланою Дякуємо!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                     </form>
+
+        <!-- container -->
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/js/API.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    //$('[data-toggle="tooltip"]').tooltip();
+  </script>
+
+</body>
+
+</html>

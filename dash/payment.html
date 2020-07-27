@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Magic-palay - Rooms</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <!-- Custom styles for this template -->
+  <link href="/assets/css/dashboard.css" rel="stylesheet">
+<link rel="stylesheet" href="https://global24.ua/wid/c2s/styles.fd31132b5398c0696711.css">
+
+<style>
+:root{
+  --color-widget-primary-rgb: 30,190,190;
+    --color-widget-secondary-rgb: 41,60,94;
+    --color-card-bg-rgb: 255,255,255;
+    --color-wallet-bg-rgb: 80,101,138;
+    --color-button-bg-rgb: 30,190,190;
+    --color-secondary-button-bg-rgb: 25,152,152;
+    --color-font-primary-rgb: 41,60,94;
+    --color-font-secondary-rgb: 106,119,143;
+    --color-font-button-rgb: 255,255,255;
+    --color-font-error-rgb: 255,255,255;
+    --color-error-rgb: 205,36,55;
+    --color-button-disabled-rgb: 148,158,175;
+    --color-font-additional-rgb: 96,93,93;
+    --color-link-visited-rgb: 148,158,175;
+    --color-checkbox-bg-rgb: 240,243,247;
+    --color-graphics-rgb: 219,223,228;
+    --color-overlay-rgb: 0,0,0;
+    --color-font-card-primary-rgb: 255,255,255;
+    --color-ks-bg-rgb: 33,159,255;
+    --color-logo-bg-rgb: 0,156,253;
+    --color-vf-bg-rgb: 51,51,51;
+    --color-font-primary: rgba(var(--color-font-primary-rgb),1);
+    --color-font-secondary: rgba(var(--color-font-secondary-rgb),1);
+    --color-ks-bg: rgba(var(--color-ks-bg-rgb),1);
+    --color-vf-bg: rgba(var(--color-vf-bg-rgb),1);
+    --color-font-card-input-placeholder: rgba(var(--color-font-card-primary-rgb),0.7);
+    --color-font-input-placeholder: rgba(var(--color-font-primary-rgb),0.7);
+    --color-font-input-primary: rgba(var(--color-font-primary-rgb),0.6);
+    --color-font-button: rgba(var(--color-font-button-rgb),1);
+    --color-font-error: rgba(var(--color-font-error-rgb),1);
+    --color-graphics: rgba(var(--color-graphics-rgb),1);
+    --color-error: rgba(var(--color-error-rgb),1);
+    --color-button-disabled: rgba(var(--color-button-disabled-rgb),0.5);
+    --color-font-additional: rgba(var(--color-font-additional-rgb),1);
+    --color-link-visited: rgba(var(--color-link-visited-rgb),1);
+    --color-background-card-primary: rgba(var(--color-card-bg-rgb),1);
+    --color-background-wallet-primary: rgba(var(--color-wallet-bg-rgb),1);
+    --color-widget-primary: rgba(var(--color-widget-primary-rgb),1);
+    --color-button-bg: rgba(var(--color-button-bg-rgb),1);
+    --color-button-bg-transparent: rgba(var(--color-button-bg-rgb),0.7);
+    --color-secondary-button-bg: rgba(var(--color-secondary-button-bg-rgb),1);
+    --color-secondary-button-bg-transparent: rgba(var(--color-secondary-button-bg-rgb),0.7);
+    --color-widget-primary-transparent: rgba(var(--color-widget-primary-rgb),0.7);
+    --color-widget-secondary: rgba(var(--color-widget-secondary-rgb),1);
+    --color-widget-secondary-transparent: rgba(var(--color-widget-secondary-rgb),0.7);
+    --color-checkbox-bg: rgba(var(--color-checkbox-bg-rgb),1);
+    --color-checkbox-border: rgba(var(--color-font-primary-rgb),0.7);
+    --color-overlay: rgba(var(--color-overlay-rgb),0.5);
+    --color-border-primary: rgba(var(--color-font-primary-rgb),1);
+    --color-transparent: transparent;
+    --font-family-main: Montserrat,sans-serif;
+    --font-size-main: 14px;
+    --font-size-additional: 12px;
+    --font-size-form-error: 25px;
+    --font-weight-main: 400;
+    --font-weight-important: 700;
+    --box-shadow-card: 0px 5px 20px rgba(41,60,94,0.1);
+    --box-shadow-button: 0px 10px 15px rgba(0,0,0,0.1);
+    --box-shadow-dialog: 0 7px 8px -4px rgba(0,0,0,0.2),0 13px 19px 2px rgba(0,0,0,0.14),0 5px 24px 4px rgba(0,0,0,0.12);
+    --box-shadow-tab: rgba(var(--color-overlay-rgb),0.1);
+}
+.card{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:start;justify-content:flex-start;box-sizing:border-box;width:308px;height:196px;padding:25px 20px;background:var(--color-background-card-primary) url(/wid/c2s/card-background.21883789c028c3d990cb.svg) no-repeat 50%;background-size:cover;border-radius:10px;box-shadow:var(--box-shadow-card)}.card-cvv{width:60px}.card-expiry{display:-webkit-box;display:flex;flex-wrap:nowrap;-webkit-box-align:center;align-items:center;-webkit-box-pack:justify;justify-content:space-between;width:180px}.card-expiry-label{padding:5px 0}.card-secrets{flex-wrap:nowrap;-webkit-box-pack:justify;justify-content:space-between}.card-secrets,.card-services{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}.card-services{-webkit-box-pack:end;justify-content:flex-end}.card.wallet{position:relative;padding-top:20px;background:var(--color-widget-primary) url(/wid/c2s/card-background.21883789c028c3d990cb.svg) no-repeat 50%;border-radius:5px 5px 5px 0}.card.ks,.card.wallet{-webkit-box-pack:justify;justify-content:space-between}.card.ks{background:var(--color-ks-bg)}.card.vf{background:var(--color-vf-bg)}.card-wrap+.card-wrap{position:relative}.card-wrap+.card-wrap:before{position:absolute;top:-20px;left:50%;display:block;width:12px;height:12px;border-bottom-style:solid;border-right-style:solid;border-bottom-width:0;border-right-width:0;border-top:3px solid var(--color-graphics);border-left:3px solid var(--color-graphics);border-radius:2px;-webkit-transform:translate(-50%,-50%) rotate(-135deg);transform:translate(-50%,-50%) rotate(-135deg);content:""}.service-logo+.service-logo{margin-left:10px}@media only screen and (min-width:768px){.card{width:368px;height:232px;padding:45px 40px 25px}.card-wrap+.card-wrap{margin-left:30px}.card-wrap+.card-wrap:before{display:none}.corner{bottom:-14px}.wallet-lock{top:55%;right:-20px}.wallet-underlay{width:368px;height:232px}}.email,.input{width:100%}.input{max-width:400px;margin-bottom:30px;padding:5px 0;color:var(--color-font-input-placeholder);font-weight:var(--font-weight-main);font-size:var(--font-size-main);font-family:var(--font-family-main);background-color:var(--color-transparent);border-width:0;border-bottom:1px solid var(--color-font-input-placeholder);border-radius:0;-webkit-transition:color .3s ease;transition:color .3s ease}.input:focus{color:var(--color-font-primary)}.input:hover{border-bottom-color:var(--color-font-primary)}.input::-webkit-input-placeholder{color:var(--color-font-input-placeholder)}.input::-moz-placeholder{color:var(--color-font-input-placeholder)}.input::-ms-input-placeholder{color:var(--color-font-input-placeholder)}.input::placeholder{color:var(--color-font-input-placeholder)}.input.ng-invalid.ng-dirty.ng-touched{border-bottom-color:var(--color-error)}.input-label{position:relative;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:start;justify-content:flex-start}.input.expiry{width:75px}.error{position:absolute;top:-22px;left:0;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:start;justify-content:flex-start;padding:5px 8px;color:var(--color-font-error);font-weight:var(--font-weight-important);font-size:var(--font-size-additional);background-color:var(--color-error);border-radius:3px}.error:before{position:relative;z-index:2;margin-right:5px;background:url(/wid/c2s/error.cdafb5ed8ecea42920ae.svg) no-repeat 50%;border-radius:3px;fill:var(--color-error)}.error:after,.error:before{display:block;width:15px;height:15px;content:""}.error:after{position:absolute;bottom:-2px;left:8px;z-index:1;background-color:var(--color-error);-webkit-transform:rotate(45deg);transform:rotate(45deg)}.button{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;box-sizing:border-box;width:100%;min-width:220px;max-width:450px;height:49px;margin-bottom:20px;padding:15px 20px;color:var(--color-font-button);font-size:var(--font-size-main);background-color:var(--color-button-bg);border:0;border-radius:5px;box-shadow:var(--box-shadow-button);cursor:pointer;-webkit-transition:background-color .3s ease;transition:background-color .3s ease;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.button:hover{background-color:var(--color-button-bg-transparent)}.button:active{background-color:var(--color-button-bg)}.button:disabled{background-color:var(--color-button-disabled)}.checkbox-label{position:relative;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:start;justify-content:flex-start;padding-top:10px;cursor:pointer}.link{color:var(--color-font-primary);-webkit-transition:color .3s ease;transition:color .3s ease}.link:hover{color:var(--color-widget-primary)}.link:visited{color:var(--color-link-visited)}[_nghost-nnn-c46]{display:block;width:100%;background-color:var(--color-widget-bg)}.amount{box-sizing:border-box;width:110px;min-width:100px;margin:0 0 0 10px;padding:5px 35px 5px 0}.carrier{margin:0 auto 25px 0}.checkbox-area{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:justify;justify-content:space-between}.wallet-wrap{position:relative}.card-expiry-label{margin-right:5px}.core{display:block;width:100%}.currency{position:relative}.currency-value{position:absolute;top:5px;right:0}.email-wrapper{width:100%;margin-top:20px}.form{box-sizing:border-box;width:100%;max-width:320px;margin:0 auto;padding:10px}.form,.form-main,.form-process{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center;-webkit-box-pack:start;justify-content:flex-start}.form-main,.form-process{padding:0 10px}.payment-amount{flex-wrap:wrap;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;box-sizing:border-box;max-width:400px;margin:0}.input-field,.payment-amount{display:-webkit-box;display:flex;width:100%}.input-field{-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:justify;justify-content:space-between;margin-bottom:30px}.input-label{padding:5px 0}.input-label.comment{width:100%}.logout{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;min-width:unset;max-width:unset;margin-bottom:0;padding:10px 15px;text-transform:capitalize;background-color:var(--color-secondary-button-bg)}.logout:hover{background-color:var(--color-secondary-button-bg-transparent)}.logout:active{background-color:var(--color-secondary-button-bg)}.responsive{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;width:100%}.terms{margin:0 5px}.translate{height:100vh;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.wallet-balance{margin-bottom:25px}.wallet-balance,.wallet-id{color:var(--color-font-button);font-weight:var(--font-weight-main);font-size:var(--font-size-main)}.wallet-id{width:100%;max-width:400px;padding:5px 0;font-family:var(--font-family-main);border-width:0;border-bottom:1px solid var(--color-font-button)}.wallet-title{margin:0 auto 10px;color:var(--color-font-button);font-weight:var(--font-weight-medium);font-size:var(--font-size-main)}.wallet-logo{height:30px}.wallet>.card-services{-webkit-box-pack:justify;justify-content:space-between}.wrapper{width:100%;height:100%;overflow:hidden}.wrapper-container{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;width:100%}.wrapper-select{position:relative;width:100%;max-width:300px;margin:20px auto}.wrapper-select .select-element-label{margin:5px 10px;color:var(--color-font-input-primary);font-size:var(--font-size-additional);text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.wrapper-select .payment-option-buttons{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;padding:10px;list-style-type:none;background:var(--color-checkbox-bg);border-radius:12px}.wrapper-select .payment-option-buttons li{width:100%;max-width:280px}.wrapper .dialog{position:fixed;top:70px;right:0;left:0;z-index:10;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center;width:90%;max-width:520px;margin:0 auto;padding:15px;text-align:center;background-color:var(--color-background-card-primary);border-radius:10px;box-shadow:var(--box-shadow-dialog)}.wrapper .dialog svg{padding-top:20px}.wrapper .dialog svg .sign{fill:var(--color-widget-primary)}.wrapper .dialog svg .sign-bg{fill:var(--color-graphics)}.wrapper .dialog p{color:var(--color-font-primary);font-weight:var(--font-weight-important);font-size:var(--font-size-form-error)}.wrapper .dialog .button{text-transform:uppercase}.wrapper .overlay{position:fixed;top:0;right:0;bottom:0;left:0;z-index:5;background-color:var(--color-overlay)}.wrapper .dialog-close{position:absolute;top:8px;right:8px;color:var(--color-font-input-placeholder);font-size:var(--font-size-dialog-close);background:var(--color-transparent);border:0;cursor:pointer}.wrapper .dialog-close:focus{outline:0}.wrapper .ks-wrap .input,.wrapper .vf-wrap .input{margin-bottom:0;color:var(--color-font-button);border-bottom-color:var(--color-font-button)}.wrapper .ks-wrap .input::-webkit-input-placeholder,.wrapper .vf-wrap .input::-webkit-input-placeholder{color:var(--color-font-button)}.wrapper .ks-wrap .input::-moz-placeholder,.wrapper .vf-wrap .input::-moz-placeholder{color:var(--color-font-button)}.wrapper .ks-wrap .input::-ms-input-placeholder,.wrapper .vf-wrap .input::-ms-input-placeholder{color:var(--color-font-button)}.wrapper .ks-wrap .input::placeholder,.wrapper .vf-wrap .input::placeholder{color:var(--color-font-button)}.wrapper .ks-wrap .font-additional,.wrapper .vf-wrap .font-additional{margin:0 0 auto;color:var(--color-font-button)}.wallet{position:relative}.wallet:before{bottom:-15px;left:0;z-index:-1;width:40px;height:40px;background-color:var(--color-widget-primary);border-radius:19px;-webkit-filter:brightness(.75);filter:brightness(.75)}.wallet:after,.wallet:before{position:absolute;display:block;content:"";pointer-events:none}.wallet:after{top:10px;left:10px;width:calc(100% - 20px);height:calc(100% - 20px);border:1px dashed var(--color-font-card-input-placeholder);border-left:0}.wallet-underlay{top:15px;left:20px;z-index:-1;display:block;width:308px;height:196px;background-color:var(--color-widget-primary);border-radius:5px}.wallet-lock,.wallet-underlay{position:absolute;-webkit-filter:brightness(.8);filter:brightness(.8)}.wallet-lock{top:50%;right:-20px;display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:start;justify-content:flex-start;width:70px;height:70px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.wallet-lock #border{fill:var(--color-font-card-input-placeholder)}.wallet-lock #union{-webkit-filter:brightness(.7);filter:brightness(.7);fill:var(--color-widget-primary)}.wallet-lock:before{position:absolute;display:block;width:20px;height:20px;margin:15px 0 0 15px;border:1px solid var(--color-font-card-input-placeholder);border-radius:50%;content:""}.corner{position:absolute;bottom:16px;left:-1px}.corner #corner{fill:var(--color-widget-primary)}@media only screen and (min-width:768px){.corner{bottom:-14px}.wallet-lock{top:55%}.wallet-underlay{width:368px;height:232px}}
+</style>
+
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading bg-dark text-light">Magic-Play </div>
+      <div class="list-group list-group-flush">
+        <a href="./" class="list-group-item list-group-item-action bg-light"><i class="icofont-home"></i> Головна</a>
+        <a href="rooms" class="list-group-item list-group-item-action bg-light"><i class="icofont-ui-game"></i> Кімнати</a>
+        <a href="referral" class="list-group-item list-group-item-action bg-light"><i class="icofont-people"></i> Реферали</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light"><i class="icofont-dollar-plus"></i>Поповнення рахунку</a>
+        <a href="faq" class="list-group-item list-group-item-action bg-light"><i class="icofont-support-faq"></i> Надіслати запитання</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand navbar-dark bg-dark border-bottom">
+        <button class="btn btn-info d-md-none" id="menu-toggle">Menu</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="payment"><i class="icofont-dollar-plus"><span id="money">??грн</span></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="logout_dash()" href="#"><i class="icofont-logout"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <!-- container 
+        <h1 class="mt-4">Magic-Play Referrals</h1> -->
+        
+<ul class="nav nav-tabs" style="margin-top: 0.7em;">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#addP">Поповнення балансу</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#giveM">Вивід грошей</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane container active" id="addP">
+    
+<h2>Поповнення балансу</h2>
+
+
+<div class="text-center"><select class="selectpicker w-50 mt-3" data-style="btn-dark" title="Виберіть суму поповнення" style="">
+  <option title="Поповнити на 15грн">на 15грн</option>
+  <option title="Поповнити на 30грн">на 30грн</option>
+  <option title="Поповнити на 60грн">на 60грн</option>
+  <option title="Поповнити на 90грн">на 90 грн</option>
+</select>
+<br>
+<button id="topay" disabled title="Kомісія становить 4грн" class="btn-info btn mt-3">Оплатити</button>
+</div>
+<br>
+<br>
+<br>
+<hr>
+<p>*Комісія становить 4грн</p>
+<p>**Ваша оплата буде зарахована впродовж дня.</p>
+
+
+  </div>
+  <div class="tab-pane container fade" id="giveM">
+<div id="ealert" class="alert alert-danger mt-1 d-none" role="alert">
+Помилка валідації форми сума повинна бути більша ніж 90грн.
+Ідентифікатор гаманця повинен складатися тільки з 14 цифер.
+Сума не повинна перевищувати гроші які є у вас на акаунті. 
+</div>
+<form id="formG" class="mt-4" style="margin: auto;width: fit-content;">
+<div class="card-wrap">
+  <div class="wallet-wrap" style="position: relative;">
+<div id="loading" class="spinner-grow d-none" role="status" style="display: block;position: absolute;top: 50%;z-index: 1;left: 48%;">
+  <span class="sr-only">Loading...</span>
+</div>
+    <div class="card wallet">
+    <h3 class="wallet-title">Гаманець для виводу</h3>
+    <input name="card" required pattern="[0-9]{14}" title="14 значний номер гаманця" type="tel" style="background-color: transparent;" class="wallet-id" title="Сума виведення" value="17006477537330">
+    <p class="wallet-balance">Сума: <input name="sum" required="" type="number" style="background-color: transparent;border: 0;color: white;max-width: 25%;" value="240"> грн</p>
+    <div class="card-services">
+      <button type="submit"  title="Kомісія становить 4грн" class="button logout">Вивести</button>
+      <img src="https://global24.ua/wid/c2s/assets/images/gmlogo.svg" width="36" height="36" alt="global money" class="service-logo"></div></div><div class="wallet-underlay"></div></div></div>
+</form>  
+<br>
+<br>
+<div><a href="https://global24.ua/ua">
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMzAwIDU5MCI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6IzI5M2M1ZTt9LmJ7ZmlsbDojMmE5ZmE0O308L3N0eWxlPjwvZGVmcz48dGl0bGU+R01fTG9nbzwvdGl0bGU+PHBhdGggY2xhc3M9ImEiIGQ9Ik00ODcuODYsMjg2LjcxVjMyOC44YTUuMDgsNS4wOCwwLDAsMCw1LjA4LDUuMDhoNjcuMjhhNS4wNyw1LjA3LDAsMCwxLDQuNjIsNy4xOSwxMDMuODMsMTAzLjgzLDAsMCwxLTk3LjM5LDU5LjY5Yy01NC4wOS0xLjc4LTk4LjEtNDUuNTEtMTAwLjItOTkuNTlhMTAzLjcsMTAzLjcsMCwwLDEsMTc0LjEtODAuMjQsNSw1LDAsMCwwLDUuMSwxbDQyLjc0LTE1YTUuMDksNS4wOSwwLDAsMCwyLjI2LTgsMTU2LjY2LDE1Ni42NiwwLDAsMC00Ny4wOC0zOC45MSw1LjExLDUuMTEsMCwwLDEtMi42Ni00LjVWMTE1LjRhNS4wNyw1LjA3LDAsMCwwLTUuMDgtNS4wN0g0OTQuNTVhNS4wNyw1LjA3LDAsMCwwLTUuMDgsNS4wN3YyMS42NmE1LjA4LDUuMDgsMCwwLDEtNS41Myw1LjA1LDE1Ni43OCwxNTYuNzgsMCwwLDAtMTcuMTItLjUsMTU0LjExLDE1NC4xMSwwLDAsMC0yOS41OCwzLjY0LDUuMDYsNS4wNiwwLDAsMS02LjE1LTVWMTE1LjRhNS4wNyw1LjA3LDAsMCwwLTUuMDgtNS4wN0gzODMuOTNhNS4wOCw1LjA4LDAsMCwwLTUuMDgsNS4wN3Y1NGE1LjEsNS4xLDAsMCwxLTIsNC4wNSwxNTUuMjUsMTU1LjI1LDAsMCwwLDAsMjQ3LjMxLDUuMTEsNS4xMSwwLDAsMSwyLDQuMDZWNDczLjZhNS4wOCw1LjA4LDAsMCwwLDUuMDgsNS4wN0g0MjZhNS4wNyw1LjA3LDAsMCwwLDUuMDgtNS4wN1Y0NTMuODNhNS4wOCw1LjA4LDAsMCwxLDYuMjItNC45NCwxNTUuODUsMTU1Ljg1LDAsMCwwLDMzLjYxLDMuNjZxNi41OCwwLDEzLS41NWE1LjA5LDUuMDksMCwwLDEsNS41Myw1LjA2VjQ3My42YTUuMDcsNS4wNywwLDAsMCw1LjA4LDUuMDdoNDIuMDhhNS4wNyw1LjA3LDAsMCwwLDUuMDgtNS4wN1Y0MzguNTNhNS4xMiw1LjEyLDAsMCwxLDIuNzEtNC40OUExNTYuMTMsMTU2LjEzLDAsMCwwLDYyMiwzMzMuODhoMFYyODYuNzFhNS4wNyw1LjA3LDAsMCwwLTUuMDgtNS4wN2gtMTI0QTUuMDgsNS4wOCwwLDAsMCw0ODcuODYsMjg2LjcxWiIvPjxwYXRoIGNsYXNzPSJiIiBkPSJNOTM0LjY3LDI4NC45bC0uMjgtMjU1LjQzQTI0LjEsMjQuMSwwLDAsMCw5MTAuMjgsNS4zNkgzMzEuNDFMMjczLjQ3LDQyLjkzSDc5MS41M0M4NDAsNDUuNDIsODkzLjQyLDk0LjY3LDg5NywxNDIuOVYzMzIuNzlaIi8+PHBhdGggY2xhc3M9ImIiIGQ9Ik0yLjgyLDMwNC4xbC4yNywyNTUuNDNBMjQuMTEsMjQuMTEsMCwwLDAsMjcuMiw1ODMuNjRINjA2LjA4TDY2NCw1NDYuMDdIMTQ2Yy00OC41LTIuNDktMTAxLjktNTEuNzQtMTA1LjQ0LTEwMFYyNTYuMjFaIi8+PHBhdGggY2xhc3M9ImIiIGQ9Ik0xMjU2LjgzLDM1Ni4wOWgtOC4yM2E4LDgsMCwwLDAtNi40NiwzLjNsLTY1LjU4LDkwLjcxYTQsNCwwLDAsMS02LjUzLDBsLTY1LjU5LTkwLjcxYTgsOCwwLDAsMC02LjQ2LTMuM2gtOC4yM2E4LDgsMCwwLDAtOCw4VjUyNi40NWE4LDgsMCwwLDAsOCw4aDIzLjM3YTgsOCwwLDAsMCw4LThWNDU0LjY3YTQsNCwwLDAsMSw3LjMtMi4zNEwxMTY2LjgsNTA2YTcuODcsNy44NywwLDAsMCw2LjQ4LDMuMzNoMGE3LjksNy45LDAsMCwwLDYuNDktMy4zNEwxMjE4LDQ1Mi40YTQsNCwwLDAsMSw3LjMxLDIuMzR2NzEuNzFhOCw4LDAsMCwwLDgsOGgyMy42YTgsOCwwLDAsMCw4LThWMzY0LjA3QTgsOCwwLDAsMCwxMjU2LjgzLDM1Ni4wOVoiLz48cGF0aCBjbGFzcz0iYiIgZD0iTTE0MjkuNiwzNTQuMzVjLTUyLjI0LDAtOTQuNzQsNDAuODQtOTQuNzQsOTFzNDIuNSw5MSw5NC43NCw5MSw5NC43NC00MC44Myw5NC43NC05MVMxNDgxLjg0LDM1NC4zNSwxNDI5LjYsMzU0LjM1Wm01NC42OCw5MWMwLDI5Ljc0LTI0LjUzLDUzLjkzLTU0LjY4LDUzLjkzLTMwLDAtNTQuNDEtMjQuMTktNTQuNDEtNTMuOTNzMjQuNDEtNTMuOTQsNTQuNDEtNTMuOTRDMTQ1OS43NSwzOTEuNDUsMTQ4NC4yOCw0MTUuNjUsMTQ4NC4yOCw0NDUuMzlaIi8+PHBhdGggY2xhc3M9ImIiIGQ9Ik0xNzQ2LjI4LDM1Ni4wOWgtMjMuNmE4LDgsMCwwLDAtOCw4djg4Ljc2YTQsNCwwLDAsMS03LDIuNzdsLTkxLjc4LTk3YTgsOCwwLDAsMC01Ljc5LTIuNWgtOC42OWE4LDgsMCwwLDAtOCw4VjUyNi40NWE4LDgsMCwwLDAsOCw4aDIzLjM4YTgsOCwwLDAsMCw4LThWNDM3LjY3YTQsNCwwLDAsMSw3LTIuNzhsOTIsOTcuMDVhOCw4LDAsMCwwLDUuNzksMi40OWg4LjcyYTgsOCwwLDAsMCw4LThWMzY0LjA3QTgsOCwwLDAsMCwxNzQ2LjI4LDM1Ni4wOVoiLz48cGF0aCBjbGFzcz0iYiIgZD0iTTE5NTkuOSw0OTkuNzhoLTg3LjQxYTQsNCwwLDAsMS00LTRWNDY4LjdhNCw0LDAsMCwxLDQtNGg2Ni44OGE4LDgsMCwwLDAsOC04VjQzOWE4LDgsMCwwLDAtOC04aC02Ni44OGE0LDQsMCwwLDEtNC00VjM5NC43NGE0LDQsMCwwLDEsNC00aDgyLjIxYTgsOCwwLDAsMCw4LThWMzY0LjA3YTgsOCwwLDAsMC04LThIMTgzOC4xMWE4LDgsMCwwLDAtOCw4VjUyNi40NWE4LDgsMCwwLDAsOCw4SDE5NTkuOWE4LDgsMCwwLDAsOC04di0xOC43QTgsOCwwLDAsMCwxOTU5LjksNDk5Ljc4WiIvPjxwYXRoIGNsYXNzPSJiIiBkPSJNMjE5NiwzNjAuMDlhNy44OSw3Ljg5LDAsMCwwLTYuOTEtNGgtMjYuNjNhOCw4LDAsMCwwLTYuOTIsNEwyMTE4LjQsNDI1YTQsNCwwLDAsMS0zLjQ4LDJoMGE0LDQsMCwwLDEtMy40OS0ybC0zNy41NS02NC45YTgsOCwwLDAsMC02LjktNGgtMjYuNDRhOCw4LDAsMCwwLTYuOSwxMmw2MC43NCwxMDQuODZhNCw0LDAsMCwxLC41NSwydjUxLjUxYTgsOCwwLDAsMCw4LDhoMjMuNjNhOCw4LDAsMCwwLDgtOFY0NzQuOTRhNCw0LDAsMCwxLC41NS0yTDIxOTYsMzY4LjA4QTcuOTEsNy45MSwwLDAsMCwyMTk2LDM2MC4wOVoiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTEzNzUsMjUxLjM1aC03Ny41N2E0LDQsMCwwLDEtNC00VjExNWE4LDgsMCwwLDAtOC04aC0yMy4zMWE4LDgsMCwwLDAtOCw4VjI3N2E4LDgsMCwwLDAsOCw4SDEzNzVhOCw4LDAsMCwwLDgtOFYyNTkuMzFBOCw4LDAsMCwwLDEzNzUsMjUxLjM1WiIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTUzNy43NywxMDUuMzVjLTUyLjA3LDAtOTQuNDQsNDAuNzItOTQuNDQsOTAuNzdzNDIuMzcsOTAuNzUsOTQuNDQsOTAuNzUsOTQuNDUtNDAuNzEsOTQuNDUtOTAuNzVTMTU4OS44NSwxMDUuMzUsMTUzNy43NywxMDUuMzVabTU0LjU1LDkwLjc3YzAsMjkuNjYtMjQuNDcsNTMuNzgtNTQuNTUsNTMuNzgtMjkuOTIsMC01NC4yNi0yNC4xMi01NC4yNi01My43OHMyNC4zNC01My43OCw1NC4yNi01My43OEMxNTY3Ljg1LDE0Mi4zNCwxNTkyLjMyLDE2Ni40NywxNTkyLjMyLDE5Ni4xMloiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTE4MTgsMTczLjY0YTQsNCwwLDAsMS0yLjUzLTIuNTIsNC4xMSw0LjExLDAsMCwxLC41NS0zLjY1aDBhMzUuNzQsMzUuNzQsMCwwLDAsNi4xMi0xOS45M2MwLTIyLjMxLTE3LjgyLTQwLjQ2LTM5LjcyLTQwLjQ2SDE3MTJhOCw4LDAsMCwwLTgsOFYyNzdhOCw4LDAsMCwwLDgsOGg4OS43YzM3LjQzLDAsNTQuNDgtMjkuNTMsNTQuNDgtNTdDMTg1Ni4xNCwyMDMuMSwxODQwLjgsMTgxLjI4LDE4MTgsMTczLjY0Wm0tNzUuNTIsMjguMjFhNCw0LDAsMCwxLDQtNGgzNi4yYzIzLjg1LDAsMzIuMzIsMTQuMiwzMi4zMiwyNi4zNywwLDE3LjExLTExLjI4LDI2LjE1LTMyLjYsMjYuMTVoLTM1LjkyYTQsNCwwLDAsMS00LTRabTI5LjU5LTM0LjFoLTI1LjgzYTQsNCwwLDAsMS00LTRWMTQ1LjYyYTQsNCwwLDAsMSw0LTRoMjMuMTNjMTAuNDgsMCwxNy4yNSw1LjEzLDE3LjI1LDEzLjA3QzE3ODYuNTksMTYwLjcxLDE3ODIuNzgsMTY3Ljc1LDE3NzIsMTY3Ljc1WiIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNMjAxNS42NywxMTEuNmE4LDgsMCwwLDAtNy4xOC00LjUyaC0xMGE4LDgsMCwwLDAtNy4xOCw0LjUzbC03Ny4xNCwxNjEuOTNhOCw4LDAsMCwwLDcuMTgsMTEuMzdoMjMuODZhOCw4LDAsMCwwLDcuMjgtNC43NWwxMi4zNy0yOC4xYTQsNCwwLDAsMSwzLjY4LTIuNGg2OS44OGE0LDQsMCwwLDEsMy42NywyLjM4bDEyLjYzLDI4LjE3YTgsOCwwLDAsMCw3LjI2LDQuN2gyMy44N2E4LDgsMCwwLDAsNy4xOC0xMS4zOFptOC4xNSwxMDIuODhhNCw0LDAsMCwxLTMuMzksMS44NWgtMzMuOTJhNCw0LDAsMCwxLTMuNjUtNS42OGwxNi44Ny0zNy4wOGEzLjkzLDMuOTMsMCwwLDEsMy42NS0yLjM1aDBhMy45MiwzLjkyLDAsMCwxLDMuNjUsMi4zNGwxNywzNy4wOEEzLjkzLDMuOTMsMCwwLDEsMjAyMy44MiwyMTQuNDhaIi8+PHBhdGggY2xhc3M9ImEiIGQ9Ik0yMjg5Ljg2LDI1MS4zNWgtNzcuNTdhNCw0LDAsMCwxLTQtNFYxMTVhOCw4LDAsMCwwLTgtOEgyMTc3YTgsOCwwLDAsMC04LDhWMjc3YTgsOCwwLDAsMCw4LDhoMTEyLjgzYTgsOCwwLDAsMCw4LThWMjU5LjMxQTgsOCwwLDAsMCwyMjg5Ljg2LDI1MS4zNVoiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTExNzYuNjQsMTgyLjk0aC03MS4yN2E2Ljg3LDYuODcsMCwwLDAtNi44Nyw2Ljg2VjIxNGE2Ljg3LDYuODcsMCwwLDAsNi44Nyw2Ljg2aDM3YTU1LjcsNTUuNywwLDEsMS0xMS44OS02NS45NSw2Ljg1LDYuODUsMCwwLDAsNi45MywxLjQzbDI0LjU2LTguNjJhNi44Myw2LjgzLDAsMCwwLDQtMy42OGwxLTIuMTMtMS40MS0xLjg2YTkyLjcxLDkyLjcxLDAsMCwwLTEyOC41OC0xOS4xN2wtLjUzLjM4LS4yOS40MmE5My4xNSw5My4xNSwwLDAsMC0uMTEsMTQ4LjExbC4zMS45LDEsLjczYTkyLjIxLDkyLjIxLDAsMCwwLDM0LjU2LDE1LjM3bC40Mi4wOWguMzNxMi43NC42LDUuNzksMS4wN2E5Mi44NSw5Mi44NSwwLDAsMCwxMDUtNzkuMzhsMC0xOC43NkE2Ljg3LDYuODcsMCwwLDAsMTE3Ni42NCwxODIuOTRaIi8+PC9zdmc+" style="
+    width: 200px;
+">
+</a>
+</div>
+<br>
+<hr>
+<p>*Комісія становить 4грн</p>
+<p>**Ваші гроші будуть надіслані впродовж дня.</p>
+
+</div>
+
+
+
+
+</div>
+
+  
+        <!-- container -->
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/i18n/defaults-ua_UA.min.js"></script>
+  <script src="/assets/js/base64.js"></script>
+  <script src="/assets/js/API.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    //$('[data-toggle="tooltip"]').tooltip();
+    var comm = base64url_encode(new URL("u:?"+getCookie("login").substr(1)).searchParams.get("email"))
+    $(".selectpicker").selectpicker();
+    $('.selectpicker').on('changed.bs.select', function (e, clickedIndex) {
+    
+    if(clickedIndex == 1){$("#topay").text("Оплатити 19грн").click(function(){window.location.href = "https://global24.ua/wid/c2s/?categoryId=3&serviceId=40&lang=uk&cardAmount=1900&comment="+comm+"&account=17006477537330&callbackUrl=https://magic-play.space/service/cofirm_payment%3Ftype=add"})}
+
+    if(clickedIndex == 2){$("#topay").text("Оплатити 34грн").click(function(){window.location.href = "https://global24.ua/wid/c2s/?categoryId=3&serviceId=40&lang=uk&cardAmount=3400&comment="+comm+"&account=17006477537330&callbackUrl=https://magic-play.space/service/cofirm_payment%3Ftype=add"})}
+    if(clickedIndex == 3){$("#topay").text("Оплатити 64грн").click(function(){window.location.href = "https://global24.ua/wid/c2s/?categoryId=3&serviceId=40&lang=uk&cardAmount=6400&comment="+comm+"&account=17006477537330&callbackUrl=https://magic-play.space/service/cofirm_payment%3Ftype=add"})}
+    if(clickedIndex == 4){$("#topay").text("Оплатити 94грн").click(function(){window.location.href = "https://global24.ua/wid/c2s/?categoryId=3&serviceId=40&lang=uk&cardAmount=9400&comment="+comm+"&account=17006477537330&callbackUrl=https://magic-play.space/service/cofirm_payment%3Ftype=add"})}
+    
+
+    $("#topay").prop("disabled",false)
+});
+    //payment https://global24.ua/wid/c2s/?categoryId=3&serviceId=40&lang=uk&callbackUrl=https:%2F%2Fhttpbin.org/anything&cardAmount=20.00&comment=userid&account=17006477537330
+function isNaturalNumber(n) {
+    n = n.toString(); // force the value incase it is not
+    var n1 = Math.abs(n),
+        n2 = parseInt(n, 10);
+    return !isNaN(n1) && n2 === n1 && n1.toString() === n;
+}
+
+$("#formG").submit(function(e){
+    e.preventDefault();
+    var form = $(this);
+    var data = form.serializeArray();
+    
+    // Іди нахуй на сервері ще раз перевіряється
+    if (data[0]["value"].length != 14 ||  !isNaturalNumber(data[1]["value"]) || Number(data[1]["value"])<90 || Number(data[1]["value"])+4 > getCookie("MONEY").substr(0,getCookie("MONEY").length-3) ){
+      $("#ealert").removeClass("d-none")
+    }
+    else{
+        $("#loading").removeClass("d-none")
+        $(".card-services button").prop("disabled",true)
+        sendMoney(data[0]["value"],data[1]["value"],function(r) {
+          (r == "ok") ? function() {
+            DataUpdate(function() { 
+              window.location.replace("https://magic-play.space/service/cofirm_payment?type=give")
+            });
+        }() :  $("#ealert").removeClass("d-none")
+        });
+        
+
+    }
+
+});
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Magic-palay - Rooms</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <!-- Custom styles for this template -->
+  <link href="/assets/css/dashboard.css" rel="stylesheet">
+<style>
+  
+  /* :::::::::::::: Presentation css */
+* {
+  --locked-color: #FFDF00;
+  --unlocked-color: #C0C0C0;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+/* :::::::::::::: Required CSS */
+/* Locked */
+.lock {
+  width: 24px;
+  height: 21px;
+  border: 3px solid var(--locked-color);
+  border-radius: 5px;
+  position: relative;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.lock:after {
+  content: "";
+  display: block;
+  background: var(--locked-color);
+  width: 3px;
+  height: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -3.5px 0 0 -2px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.lock:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 13px;
+  bottom: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  border: 3px solid var(--locked-color);
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* Locked Hover */
+.lock:hover:before {
+  height: 16px;
+}
+/* Unlocked */
+.unlocked {
+  transform: rotate(10deg);
+}
+.unlocked:before {
+  bottom: 130%;
+  left: 31%;
+  margin-left: -11.5px;
+  transform: rotate(-45deg);
+}
+.unlocked,
+.unlocked:before {
+  border-color: var(--unlocked-color);
+}
+.unlocked:after {
+  background: var(--unlocked-color);
+}
+/* Unlocked Hover */
+.unlocked:hover:before {
+  height: 13px;
+}
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+
+.swing:hover {
+  -webkit-animation: swing 0.6s ease;
+  animation: swing 0.6s ease;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+}
+.swing {
+  -webkit-animation: swing 0.6s ease;
+  animation: swing 0.6s ease;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+}
+</style>
+</head>
+
+<body>
+<div id="blockpagediv" style="
+    background-color: rgba(0,0,0,.7);
+    position: fixed;
+    z-index: 99999999;
+" class="w-100 h-100 d-none">
+<div class="spinner-border text-light" role="status" style="
+    top: 40%;
+    position: absolute;
+    left: 49%;
+">
+  <span class="sr-only">Loading...</span>
+</div>
+</div>
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light" id="sidebar-wrapper">
+      <div class="sidebar-heading bg-dark text-light">Magic-Play </div>
+      <div class="list-group list-group-flush">
+        <a href="./" class="list-group-item list-group-item-action bg-light"><i class="icofont-home"></i> Головна</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light"><i class="icofont-ui-game"></i> Кімнати</a>
+        <a href="referral" class="list-group-item list-group-item-action bg-light"><i class="icofont-people"></i> Реферали</a>
+        <a href="payment" class="list-group-item list-group-item-action bg-light"><i class="icofont-dollar-plus"></i>Поповнення рахунку</a>
+        <a href="faq" class="list-group-item list-group-item-action bg-light"><i class="icofont-support-faq"></i> Надіслати запитання</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content ЗАДНІЙ ФОН -->
+    <div id="page-content-wrapper" style="
+    position: relative;
+    background-image: url();
+    background-size: contain;
+    background-repeat: round;
+">
+<div class="game-off d-none" style="
+    position: fixed;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+"></div>
+<div class="game-off d-none" style="
+    position: absolute;
+    z-index: 12;
+    color: white;
+    width: -webkit-fill-available;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+">
+<span class="display-4">Початок у ??.??.???? у ??:??</span>
+</div>
+      <nav class="navbar navbar-expand navbar-dark bg-dark border-bottom" style="z-index: 11;border-bottom-color: transparent!important">
+        <button class="btn btn-info d-md-none" id="menu-toggle">Menu</button>
+        <div class="text-center text-md-left" style="
+    width: -webkit-fill-available;
+"><span style="
+    color: white;
+"><span id="ntte" style="
+">До закінчення</span><br class="d-sm-none"> <span id="tte" style="
+    "></span></span></div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="payment"><i class="icofont-dollar-plus"><span id="money">??грн</span></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="logout_dash()" href="#"><i class="icofont-logout"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+
+
+<div class="modal fade" id="helloModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" data-backdrop="static" aria-hidden="true" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Інформація</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- instruction -->
+        <div class="row">
+        <div class="col-4 text-center"><img src="/assets/img/door-bronze.png" style="width: 100px;">BRONZE GAME</div>
+        <div class="col-4 text-center"><img src="/assets/img/door-metal.png" style="width: 100px;">SILVER GAME</div>
+        <div class="col-4 text-center"><img src="/assets/img/door-gold.png" style="width: 100px;">GOLD GAME</div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12"><h5>Кімнати діляться на 3 групи. У кожної групи своя сума вхідного квитка і виграшу</h5></div>
+          <div class="col-12"><p><b>BRONZE GAME</b><br>
+            "Бронзова гра" - це найдешевша гра. Вхід коштує всього лиш 30грн а можливий виграш становить 240грн
+          </p></div>
+          <div class="col-12"><p><b>SILVER GAME</b><br>
+            "Срібна гра" - це найпопулярніша гра. Вхід коштує всього лиш 60грн а можливий виграш становить 480грн
+          </p></div>
+          <div class="col-12"><p><b>GOLD GAME</b><br>
+            "Золота гра" - це найприбутковіша гра. Вхід коштує 90грн а можливий виграш становить 720грн
+          </p></div>
+          <br>
+          <div class="col-12">
+            <h5>Ключі і Замки</h5>
+          </div>
+          <div class="col-4"></div>
+          <div class="col-4">
+            <br>
+    <div class="KEY  text-center" >
+          <img src="/assets/img/goldkey.svg" alt="GK" style="
+    width: 20px;
+"><span> </span><span style="font-size: 1.1em;">2</span>
+        </div></div>
+          <div class="col-4"></div>
+           <br>
+          <div class="col-12">
+            <p>На початку гри у кожного є 2 ключа ними можна відкривати двері і розпочинати гру. Щоб збільшити кількість можливих одночасних ігор потрібно запросити <a href="referral">рефералів</a> за допомогою вашого посилання кожні 5 друзів додають додатковий ключ.</p>
+          </div>
+          <br>
+          <div class="col-2"></div>
+          <div class="col-4">
+            <div style="margin: 0;padding: 0;box-sizing: border-box;position: absolute;top: 56%;" class="d-flex">
+      <span class="lock d-block" style="right: -43px;"></span>
+    </div>
+  </div>
+          <div class="col-4">
+                <div style="margin: 0;padding: 0;box-sizing: border-box;position: absolute;top: 56%;" class="d-flex">
+      <span class="lock d-block unlocked" style="right: -43px;"></span>
+    </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <div class="col-12"><p>Після того як ви використали ключ для того щоб відкрити двері вони до закінчення гри залишаються відкритими. Але ви зможити самостійно їх закрити це коштуватиме половину від вхідного білету</p></div>
+    <br>
+    <div class="col-12">
+      <h5>Ціль гри</h5>
+    </div>
+    <br>
+    <div class="col-12">
+      <p>Гра поділена на 4 зони: <span style="color: #24d0d0;">синю</span>, <span style="color: limegreen;">зелену</span>, <span style="color: goldenrod;">жовту</span>, <span style="color: #fb0014;">червону</span></p>
+      <p>На старті ви попадаєте в <span style="color: #fb0014;">червону</span> зону ціль гри добратися до <span style="color: #24d0d0;">синьої</span>. Після того як <span style="color: #fb0014;">червона</span> зона буде заповнена ви попадаєте у <span style="color: goldenrod;">жовту</span>, також вас може перекинути в іншу кімнату. Після <span style="color: goldenrod;">жовтої</span> буде <span style="color: limegreen;">зелена</span> а тоді в <span style="color: #24d0d0;">синю</span>. Коли ви в <span style="color: #24d0d0;">синій</span> зоні ви получаєте свій виграш як тільки в <span style="color: #fb0014;">червоній</span> появиться 8 людей.</p>
+      <h4>Бажаємо успіху!</h4>
+    </div>
+
+
+        </div>
+        <!-- instruction -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick='setCookie("hellogame","true")' data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="joinModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Вхід в гру</h5>
+        <button type="button" class="close" data-dismiss="modal" onclick='$("#joinModalCenter .alert").addClass("d-none")' aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger d-none" role="alert">
+            У вас не достатньо ключів або <a href="payment">грошей</a>!
+        </div>
+        Вхід в кімнату коштує <span id="lsum">90</span>грн<br>
+        Продовжити?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick='$("#joinModalCenter .alert").addClass("d-none")' data-dismiss="modal">Назад</button>
+        <button id="roomJoinButton" type="button" onclick="doorOpen($(this).data('door'))" data-door="" class="btn btn-primary">Увійти</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- container -->
+<div class="KEYS p-1 pr-3 mt-2 border" style="
+    position: fixed;
+    right: 0em;
+    background: rgba(245, 245, 245, 1);
+    z-index: 1;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+">
+          <img src="/assets/img/goldkey.svg" alt="GK" style="
+    width: 20px;
+"><span> </span><span id="avalible-keys" style="font-size: 1.1em;">?</span>
+        </div>
+
+
+<div id="gmain" class="row" style="">
+
+      <script>
+        
+
+      </script>
+
+
+        <!-- container -->
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="/assets/js/API.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
+  <script src="/assets/js/game.js"></script>
+  <!-- Menu Toggle Script -->
+  <script>
+    $($(".game-off")[0]).removeClass("d-none");
+//
+var startedG = false;
+var blockTEXT = "Початок у Суботу 03.08.2020 у 14:00";
+//
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    if(!getCookie("hellogame")){$("#helloModalLong").modal("show");}
+
+    window.onhashchange = function () {
+      if (window.location.hash.substr(1)){
+        try {
+
+
+    if($([document.documentElement, document.body]).animate({
+        scrollTop: $("#"+window.location.hash.substr(1)).offset().top
+    }, 180)){
+    setTimeout(function() {
+      $("#"+window.location.hash.substr(1)).addClass("swing")
+    },200)
+    setTimeout(function() {
+      $("#"+window.location.hash.substr(1)).removeClass("swing")
+    },2000)
+    }}
+ catch (error) {
+  console.log("not found")
+
+
+  }}}
+var countDownDate = new Date("2020-08-09").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var delta = countDownDate - now;
+    if (!startedG || delta < 0) {
+    clearInterval(x);
+    document.getElementById("ntte").innerHTML = "Закінчено";
+    $(".game-off span").text(blockTEXT);
+    $(".game-off").removeClass("d-none");
+    return;
+
+  }
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(delta / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((delta % (1000 * 60)) / 1000);
+  document.getElementById("tte").innerHTML = days + "дн " + hours + "г "
+  + minutes + "хв " + seconds + "с ";
+    
+
+}, 1000);
+
+
+    window.addEventListener('load', function (a) {
+      function showDoors() {
+        (startedG) ? $($(".game-off")[0]).addClass("d-none") : false;
+      }
+
+      if (getCookie("GAMEDATATYPE")) {getDoors(getCookie("GAMEDATATYPE"),showDoors)}else{
+        getDoors("a",showDoors)
+        setCookie("GAMEDATATYPE","a")
+      }
+      })
+    
+
+  </script>
+
+</body>
+
+</html>

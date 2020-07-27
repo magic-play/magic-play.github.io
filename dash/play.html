@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Magic-palay - GAME</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <!-- Custom styles for this template -->
+  <link href="/assets/css/dashboard.css" rel="stylesheet">
+<style>
+
+@keyframes rotateAnimation {
+  0% {transform: rotateY(0deg) translateY(-50px);
+  }
+  50%{
+    transform: rotateY(90deg) translateY(-65px);
+  } 
+  100% {
+    transform: rotateY(0deg) translateY(-50px);
+  }
+}
+
+
+.rad{
+  position: absolute;
+  top: 3em;
+  left: 2em;
+}
+
+.cube{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+  transform: rotateX(-45deg) rotateY(-45deg);*/
+
+}
+
+.ivica,.ivica-red,.ivica-yellow,.ivica-green,.ivica-diamond{
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  opacity: 1;
+}
+
+
+.ivica.front{
+  background-color: #1300f2;
+  transform: translateZ(25px);
+  
+  border: 1px solid black;
+}
+
+.ivica.right{
+  background-color: #0000a0;
+  transform: translateX(25px) rotateY(90deg);
+ 
+  border: 1px solid black;
+}
+
+.ivica.top{
+  background-color: #5f58fe;
+  transform: rotateX( 90deg) translateZ(25px);
+  border: 1px solid black;
+ 
+  
+}
+.ivica-red.front{
+  background-color: #fb0014;
+  transform: translateZ(25px);
+  
+  border: 1px solid black;
+}
+
+.ivica-red.right{
+  background-color: #960002;
+  transform: translateX(25px) rotateY(90deg);
+ 
+  border: 1px solid black;
+}
+
+.ivica-red.top{
+  background-color: #fc676d;
+  transform: rotateX( 90deg) translateZ(25px);
+  border: 1px solid black;
+ 
+  
+}
+
+.ivica-yellow.front{
+  background-color: yellow;
+  transform: translateZ(25px);
+  
+  border: 1px solid black;
+}
+
+.ivica-yellow.right{
+  background-color: goldenrod;
+  transform: translateX(25px) rotateY(90deg);
+ 
+  border: 1px solid black;
+}
+
+.ivica-yellow.top{
+  background-color: #f3f36c;
+  transform: rotateX( 90deg) translateZ(25px);
+  border: 1px solid black;
+ 
+  
+}
+
+.ivica-green.front{
+  background-color: limegreen;
+  transform: translateZ(25px);
+  
+  border: 1px solid black;
+}
+
+.ivica-green.right{
+  background-color: green;
+  transform: translateX(25px) rotateY(90deg);
+ 
+  border: 1px solid black;
+}
+
+.ivica-green.top{
+  background-color: #6ddc6d;
+  transform: rotateX( 90deg) translateZ(25px);
+  border: 1px solid black;
+ 
+  
+}
+
+.ivica-diamond.front{
+  background-color: cyan;
+  transform: translateZ(25px);
+  
+  border: 1px solid black;
+}
+
+.ivica-diamond.right{
+  background-color: #24d0d0;
+  transform: translateX(25px) rotateY(90deg);
+ 
+  border: 1px solid black;
+}
+
+.ivica-diamond.top{
+  background-color: #94ffff;
+  transform: rotateX( 90deg) translateZ(25px);
+  border: 1px solid black;
+ 
+  
+}
+
+.bs-tooltip-right .arrow {
+  top: 8px!important;
+}
+
+</style>
+</head>
+
+<body>
+<div id="blockpagediv" style="background-color: rgba(0,0,0,.7);position: fixed;z-index: 99999999;" class="w-100 h-100 d-none">
+<div class="spinner-border text-light" role="status" style="top: 40%;position: absolute;left: 49%;"><span class="sr-only">Loading...</span></div>
+</div>
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light" id="sidebar-wrapper">
+      <div class="sidebar-heading bg-dark text-light">Magic-Play </div>
+      <div class="list-group list-group-flush">
+        <a href="./" class="list-group-item list-group-item-action bg-light"><i class="icofont-home"></i> Головна</a>
+        <a href="rooms" class="list-group-item list-group-item-action bg-light"><i class="icofont-ui-game"></i> Кімнати</a>
+        <a href="referral" class="list-group-item list-group-item-action bg-light"><i class="icofont-people"></i> Реферали</a>
+        <a href="payment" class="list-group-item list-group-item-action bg-light"><i class="icofont-dollar-plus"></i>Поповнення рахунку</a>
+        <a href="faq" class="list-group-item list-group-item-action bg-light"><i class="icofont-support-faq"></i> Надіслати запитання</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content ЗАДНІЙ ФОН -->
+    <div id="page-content-wrapper" style="
+    position: relative;
+    background-image: url(https://hougumlaw.com/wp-content/uploads/2016/05/light-website-backgrounds-light-color-background-images-light-color-background-images-for-website-1024x640.jpg);
+   /* background-size: contain;*/
+    background-repeat: round;
+">
+<div class="game-off d-none" style="
+    position: fixed;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+"></div>
+<div class="game-off d-none" style="
+    position: absolute;
+    z-index: 12;
+    color: white;
+    width: -webkit-fill-available;
+    text-align: center;
+    top: 50%;
+">
+<div class="spinner-grow text-light" role="status" style="top: 40%;position: absolute;left: 49%;"><span class="sr-only">Loading...</span></div>
+</div>
+      <nav class="navbar navbar-expand navbar-dark bg-dark border-bottom" style="z-index: 11;border-bottom-color: transparent!important">
+        <button class="btn btn-info d-md-none" id="menu-toggle">Menu</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="payment"><i class="icofont-dollar-plus"><span id="money">??грн</span></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="logout_dash()" href="#"><i class="icofont-logout"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class=" p-1 pr-3 mt-2 border" onclick="$('#exitModalCenter').modal('show')" style="
+    position: fixed;
+    right: 0em;
+    top: 5em;
+    cursor: pointer;
+    background: rgba(245, 245, 245, 1);
+    z-index: 1;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-right: -27px;
+">
+          <i class="icofont-power d-block" style="
+    width: 35px;
+    font-size: 20px;
+"></i>
+        </div>
+
+      <div class="container-fluid">
+
+<div class="modal fade" id="exitModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Вихід з гри</h5>
+        <button type="button" class="close" data-dismiss="modal" onclick='$("#exitModalCenter .alert").addClass("d-none")' aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger d-none" role="alert">
+            У вас не достатньо <a href="payment">грошей</a>!
+        </div>
+        Вихід з кімнати коштує <span id="lsum">45</span>грн<br>
+        Продовжити?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick='$("#exitModalCenter .alert").addClass("d-none")' data-dismiss="modal">Назад</button>
+        <button id="roomExitButton" type="button" onclick='exitGAME(getUrlVars("id")["id"])'  class="btn btn-primary">Вийти</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- container -->
+<div class="row  text-center" style="
+    position: relative;
+    width: -webkit-fill-available;
+">
+
+
+
+<div class="progress" data-percentage="5" style="
+    position: absolute;
+    left: 50%;
+    transform: translateX(-52%);
+    top: 29%;
+">
+    <span class="progress-left">
+      <span class="progress-bar"></span>
+    </span>
+    <span class="progress-right">
+      <span class="progress-bar"></span>
+    </span>
+    <div class="progress-value">
+      <div><span style="
+    font-size: 1rem;
+">??%</span><br>
+        <span>наступний<br>рівень</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<div style="
+    /* margin: auto; */
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-left: calc(50% - 200px);
+">
+
+
+<div class="rad">
+  <div class="cube">
+    <div class="ivica-red front"></div>
+    <div class="ivica-red right"></div>
+    <div class="ivica-red top"></div>
+  </div>
+</div>
+<div class="rad" style="
+    top: 6.7em;
+    left: 4.2em;
+">
+  <div class="cube">
+    <div class="ivica-red front"></div>
+    <div class="ivica-red right"></div>
+    <div class="ivica-red top"></div>
+  </div>
+</div><div class="rad" style="
+    top: 10.4em;
+">
+  <div class="cube">
+    <div class="ivica-yellow front"></div>
+    <div class="ivica-yellow right"></div>
+    <div class="ivica-yellow top"></div>
+  </div>
+</div>
+
+
+
+<div class="rad" style="
+    top: 10.4em;
+    left: 6.4em;
+">
+  <div class="cube">
+    <div class="ivica-red front"></div>
+    <div class="ivica-red right"></div>
+    <div class="ivica-red top"></div>
+  </div>
+</div><div class="rad" style="
+    top: 14.1em;
+    left: 4.2em;
+">
+  <div class="cube">
+    <div class="ivica-yellow front"></div>
+    <div class="ivica-yellow right"></div>
+    <div class="ivica-yellow top"></div>
+  </div>
+</div><div class="rad" style="
+    top: 14.1em;
+    left: 8.6em;
+">
+  <div class="cube">
+    <div class="ivica-red front"></div>
+    <div class="ivica-red right"></div>
+    <div class="ivica-red top"></div>
+  </div>
+</div><div class="rad" style="
+    top: 17.8em;
+    left: 6.42em;
+">
+  <div class="cube">
+    <div class="ivica-green front"></div>
+    <div class="ivica-green right"></div>
+    <div class="ivica-green top"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="rad" style="
+    left: 19.56em;
+">
+  <div class="cube">
+    <div class="ivica-red front"></div>
+    <div class="ivica-red right"></div>
+    <div class="ivica-red top"></div>
+  </div>
+</div>
+<div class="rad" style="
+    top: 6.65em;
+    left: 17.41em;
+">
+  <div class="cube">
+    <div class="ivica-red front"></div>
+    <div class="ivica-red right"></div>
+    <div class="ivica-red top"></div>
+  </div>
+</div>
+<div class="rad" style="
+    top: 10.4em;
+    left: 15.2em;
+">
+  <div class="cube">
+    <div class="ivica-red front"></div>
+    <div class="ivica-red right"></div>
+    <div class="ivica-red top"></div>
+  </div>
+</div>
+<div class="rad" style="
+    top: 10.4em;
+    left: 19.59em;
+">
+  <div class="cube">
+    <div class="ivica-yellow front"></div>
+    <div class="ivica-yellow right"></div>
+    <div class="ivica-yellow top"></div>
+  </div>
+</div>
+
+
+
+<div class="rad" style="
+    top: 14.1em;
+    left: 13em;
+">
+  <div class="cube">
+    <div class="ivica-red front"></div>
+    <div class="ivica-red right"></div>
+    <div class="ivica-red top"></div>
+  </div>
+</div><div class="rad" style="
+    top: 14.13em;
+    left: 17.398em;
+">
+  <div class="cube">
+    <div class="ivica-yellow front"></div>
+    <div class="ivica-yellow right"></div>
+    <div class="ivica-yellow top"></div>
+  </div>
+</div>
+
+
+<div class="rad" style="
+    top: 17.8em;
+    left: 15.19em;
+">
+  <div class="cube">
+    <div class="ivica-green front"></div>
+    <div class="ivica-green right"></div>
+    <div class="ivica-green top"></div>
+  </div>
+</div>
+
+<div class="rad" style="
+    top: 17.8em;
+    left: 10.8em;
+">
+  <div class="cube">
+    <div class="ivica-diamond front"></div>
+    <div class="ivica-diamond right"></div>
+    <div class="ivica-diamond top"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    </div>
+</div>
+
+    <!-- container -->
+</div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="/assets/js/API.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
+  <script src="/assets/js/game.js"></script>
+  <!-- Menu Toggle Script -->
+  <script>
+    function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    $(".game-off").removeClass("d-none")
+    
+    if(!getCookie("GAMEIDS") || !getCookie("GAMEIDS").split(",").includes(getUrlVars("id")["id"])){
+          window.location.replace("rooms")
+
+    };
+
+    window.addEventListener('load', function (a) {
+     getDGAME(getUrlVars("id")["id"],function () {
+    $(".game-off").addClass("d-none");
+    $('[data-toggle="tooltip"]').tooltip()
+     });
+     console.log(1);
+    })
+    
+
+  </script>
+
+</body>
+
+</html>

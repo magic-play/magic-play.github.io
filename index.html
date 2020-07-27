@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="uk">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Magic-Play - Вигравай гроші граючи в гру</title>
+      <meta content="Разом з нашою програмою ви зможете вигравати великі виграші з мінімальним ризиком у ігровому форматі. Для цього потрібно зареєструватися, вибрати рівень гри і оплатити вхід. При цьому кожний запрошений вами друг збільшує ваш шанс на перемогу." name="descriptison">
+      <meta content="" name="keywords">
+      <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      <!-- Vendor CSS Files -->
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+      <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+      <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+      <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+      <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+      <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+      <!-- Template Main CSS File -->
+      <link href="assets/css/style.css" rel="stylesheet">
+   </head>
+   <body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+      <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>
+      <!-- ======= Header ======= -->
+      <header id="header" class="fixed-top d-flex align-items-center header-scrolled">
+         <div class="container d-flex align-items-center">
+            <div class="logo mr-auto">
+               <h1 class="text-light"><a href="index.html"><span>Magic-Play</span></a></h1>
+               <!-- Uncomment below if you prefer to use an image logo -->
+               <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+            <nav class="nav-menu d-none d-lg-block">
+               <ul>
+                  <li class=""><a href="#index.html">Головна</a></li>
+                  <li class=""><a href="#about">Про нас</a></li>
+            <!--  <li><a href="#services">Services</a></li>
+                   <li><a href="#portfolio">Portfolio</a></li> 
+                     <li><a href="#team">Team</a></li> -->
+                  <li><a href="#pricing">Ціни</a></li>
+                  <!-- <li class="drop-down">
+                     <a href="#">Мова</a>
+                     <ul>
+                        <li><a href="#">Українська</a></li>
+                        <li><a href="/ru/">Русский</a></li>
+                        
+                     </ul>
+                  </li> -->
+                  <li><a href="#contact">Контакти</a></li>
+                  <li class="get-started"><a href="#" class="main-nav">Реєстрація</a></li>
+               </ul>
+            </nav>
+            <!-- .nav-menu -->
+         </div>
+         <!-- login popup -->
+         <div class="cd-user-modal">
+            <!-- this is the entire modal form, including the background -->
+            <div class="cd-user-modal-container">
+               <!-- this is the container wrapper -->
+               <ul style="list-style: none;" class="cd-switcher">
+                  <li><a href="#0" style="color: #2f889a; text-decoration: none;">Вхід</a></li>
+                  <li><a href="#0" style="color: #2f889a; text-decoration: none;" class="selected">Новий запис</a></li>
+               </ul>
+               <div id="cd-login">
+                  <!-- log in form -->
+                  <form class="cd-form">
+                     <div id="status-spiner" style="position:absolute; left:48%; top:75%;" class="d-none spinner-border text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+                     <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                        <input required class="full-width has-padding has-border" name="email" id="signin-email" type="email" placeholder="E-mail">
+                        <span class="cd-error-message">Неправельний логін або пароль. Повторіть через 5 секунд або відновіть його</span>
+                     </p>
+                     <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Password</label>
+                        <input required class="full-width has-padding has-border" name="pass" id="signin-password" type="password" placeholder="Password">
+                        <a href="#0" class="hide-password">Show</a>
+                        <span class="cd-error-message">Error message here!</span>
+                     </p>
+                     <p class="fieldset">
+                        <input type="checkbox" id="remember-me" checked="true">
+                        <label for="remember-me">Remember me</label>
+                     </p>
+                     <p class="fieldset">
+                        <input class="full-width" type="submit" value="Вхід">
+                     </p>
+                  </form>
+                  <p class="cd-form-bottom-message"><a style="text-decoration: underline; margin-top: 1em;display: block;" href="#0">Забули пароль?</a></p>
+                  <!-- <a href="#0" class="cd-close-form">Close</a> -->
+               </div>
+               <!-- cd-login -->
+               <div id="cd-signup" class="is-selected">
+                  <!-- sign up form -->
+                  <div class="alert alert-success d-none" role="alert" style="margin-bottom: 0px;padding-bottom: 10px;">
+                     Email з підтвердженням вислано! Будь ласка підтвердіть обліковий запис.
+                  </div>
+                  <form class="cd-form">
+                     <p class="fieldset">
+                        <label class="image-replace cd-username" for="signup-username">Username</label>
+                        <input required class="full-width has-padding has-border" pattern = "[A-Za-z0-9]{6,}" title = "Логін не повинен бути коротший ніж 6 латинських символів" name="uname" id="signup-username" type="text" placeholder="Username">
+                        <span class="cd-error-message">Error message here!</span>
+                     </p>
+                     <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                        <input required class="full-width has-padding has-border" name="email" id="signup-email" type="email" placeholder="E-mail" pattern="(.*?)@(gmail\.com|ukr\.net|i\.ua|meta\.ua|yahoo\.com|hotmail\.com)" title="Підтримувані сервіси: Gmail.com Ukr.net I.net Meta.ua Yahoo.com Hotmail.com">
+                        <span class="cd-error-message"> Цей email вже використовується. Вкажіть іший через 5 секунд або відновіть доступ до акаунта</span>
+                     </p>
+                     <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Password</label>
+                        <input required class="full-width has-padding has-border" name="pass" id="signup-password" type="password" placeholder="Password">
+                        <a href="#0" class="hide-password">Show</a>
+                        <span class="cd-error-message">Error message here!</span>
+                     </p>
+                     <p class="fieldset">
+                        <input required type="checkbox" name="ToU" id="accept-terms">
+                        <label for="accept-terms">I agree to the <a href="/ToU">Terms</a></label>
+                     </p>
+                     <input name="ref" type="hidden" value="">
+                     <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Зареєструватися">
+                     </p>
+                  </form>
+                  <!-- <a href="#0" class="cd-close-form">Close</a> -->
+               </div>
+               <!-- cd-signup -->
+               <div id="cd-reset-password">
+                  <!-- reset password form -->
+                  <div class="alert alert-success d-none" role="alert" style="margin-bottom: 0px;padding-bottom: 10px;">
+                     Email з підтвердженням вислано! Будь ласка підтвердіть зміну паролю.
+                  </div>
+                  <p class="cd-form-message">Забули пароль? Будь ласка введіть ваш email адрес. Ми надішлемо вам email для відновлення паролю.</p>
+                  <form class="cd-form">
+                     <p class="fieldset">
+                        <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                        <input required="" class="full-width has-padding has-border" name="email" id="reset-email" type="email" placeholder="E-mail"  pattern="(.*?)@(gmail\.com|ukr\.net|i\.ua|meta\.ua|yahoo\.com|hotmail\.com)" title="Підтримувані сервіси: Gmail Ukr.net I.net Meta.ua Yahoo.com Hotmail.com">
+                        <span class="cd-error-message">Цей email ще не використовується. Будь ласка зареєструйтеся</span>
+                     </p>
+                     <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Password</label>
+                        <input required="" class="full-width has-padding has-border" name="pass" id="signin-password" type="password" placeholder="Password">
+                        <a href="#0" class="hide-password">Show</a>
+                        
+                     </p>
+                     <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Reset password">
+                     </p>
+                  </form>
+                  <p class="cd-form-bottom-message"><a style="text-decoration: underline; margin-top: 1em;display: block;" href="#0">Назад</a></p>
+               </div>
+               <!-- cd-reset-password -->
+               <a href="#" class="cd-close-form">Close</a>
+            </div>
+            <!-- cd-user-modal-container -->
+         </div>
+         <!-- cd-user-modal -->
+         <!-- login popup end -->
+      </header>
+      <!-- End Header -->
+      <!-- ======= Hero Section ======= -->
+      <section id="hero" class="d-flex align-items-center">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                  <h1 data-aos="fade-up" class="aos-init aos-animate">Вигравай легко разом з Magic-Play</h1>
+                  <h2 data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate">Вигравай суму в декілька раз більшу за розмір твого внеску</h2>
+                  <div data-aos="fade-up" data-aos-delay="800" class="aos-init aos-animate">
+                     <a href="#about" class="btn-get-started scrollto">Детальніше</a>
+                  </div>
+               </div>
+               <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                  <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- End Hero -->
+      <main id="main">
+         <!-- ======= About Us Section ======= -->
+         <section id="about" class="about">
+            <div class="container">
+               <div class="section-title aos-init aos-animate" data-aos="fade-up">
+                  <h2>Про нас</h2>
+               </div>
+               <div class="row content">
+                  <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                     <p>Разом з нашою програмою ви зможете вигравати великі виграші сидячи вдома</p>
+                     <ul>
+                        <li><i class="ri-check-double-line"></i>Мінімальні затрати</li>
+                        <li><i class="ri-check-double-line"></i>Великий коофіцієнт виграшу</li>
+                        <li><i class="ri-check-double-line"></i>Простий і зрозумілий ігровий формат</li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-6 pt-4 pt-lg-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                     <p>Разом з нашою програмою ви зможете вигравати великі виграші з мінімальним ризиком у ігровому форматі. Для цього потрібно зареєструватися, вибрати рівень гри і оплатити вхід. При цьому кожний запрошений вами друг збільшує Ваш шанс на перемогу. Зацікавило? Тоді реєструйся і біжи вигравати!</p>
+                     <a href="#" class="btn-learn-more main-nav">Реєстрація</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- End About Us Section -->
+         <!-- ======= Counts Section ======= -->
+         <section id="counts" class="counts">
+            <div class="container">
+               <div class="row">
+                  <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start aos-init aos-animate" data-aos="fade-right" data-aos-delay="150">
+                     <img src="assets/img/counts-img.svg" alt="" class="img-fluid">
+                  </div>
+                  <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0 aos-init aos-animate" data-aos="fade-left" data-aos-delay="300">
+                     <div class="content d-flex flex-column justify-content-center">
+                        <div class="row">
+                           <div class="col-md-6 d-md-flex align-items-md-stretch">
+                              <div class="count-box">
+                                 <i class="icofont-simple-smile"></i>
+                                 <span data-toggle="counter-up">1000</span>
+                                 <p><strong>Щасливих клієнтів</strong> які легко заробили свої виграші разом з нами.</p>
+                              </div>
+                           </div>
+                           <div class="col-md-6 d-md-flex align-items-md-stretch">
+                              <div class="count-box">
+                                 <i class="icofont-ui-game"></i>
+                                 <span data-toggle="counter-up">3</span>
+                                 <p><strong>Ігрових режима</strong> з різними виграшами</p>
+                              </div>
+                           </div>
+                           <div class="col-md-6 d-md-flex align-items-md-stretch">
+                              <div class="count-box">
+                                 <i class="icofont-clock-time"></i>
+                                 <span data-toggle="counter-up">7</span>
+                                 <p><strong>Щотижневий рестарт</strong> гри для підтримування балансу і ігрової економіки.</p>
+                              </div>
+                           </div>
+                           <div class="col-md-6 d-md-flex align-items-md-stretch">
+                              <div class="count-box">
+                                 <i class="icofont-thumbs-up"></i>
+                                 <span data-toggle="counter-up">15000</span>
+                                 <p><strong>Позитивних відгуків</strong>, які допомагають нам покращуватися і відповідати новітнім стандартам.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- End .content-->
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- End Counts Section -->
+         <!-- ======= Pricing Section ======= -->
+         <section id="pricing" class="pricing">
+            <div class="container">
+               <div class="section-title">
+                  <h2>Ціни</h2>
+                  <p>BRONZE GAME всього 30 грн. - виграш <b>240</b> грн.</p>
+               </div>
+               <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                     <div class="box aos-init" data-aos="zoom-in-right" data-aos-delay="200">
+                        <h3>BRONZE GAME</h3>
+                        <h4><sup>₴</sup>30<span></span></h4>
+                        <ul>
+                           <li>240₴ виграш</li>
+                           <li>Не дорожче за шоколадку</li>
+                           <li>Виграш - мінімальна сума виводу</li>
+                           <li class="na">Найпопулярніша гра</li>
+                        </ul>
+                        <div class="btn-wrap">
+                           <a href="#" class="btn-buy main-nav">Грай зараз!</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+                     <div class="box recommended aos-init" data-aos="zoom-in" data-aos-delay="100">
+                        <h3>SILVER GAME</h3>
+                        <h4><sup>₴</sup>60<span></span></h4>
+                        <ul>
+                           <li>480₴ виграш</li>
+                           <li>Не дорожче за БігМак Меню</li>
+                           <li>Виграш - мінімальна сума виводу</li>
+                           <li>Найпопулярніша гра</li>
+                        </ul>
+                        <div class="btn-wrap">
+                           <a href="#" class="btn-buy main-nav">Грай зараз!</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                     <div class="box aos-init" data-aos="zoom-in-left" data-aos-delay="200">
+                        <h3>GOLD GAME</h3>
+                        <h4><sup>₴</sup>90<span></span></h4>
+                        <ul>
+                           <li>720₴ виграш</li>
+                           <li>Не дорожче за сніданок</li>
+                           <li>Максимальний виграш</li>
+                           <li class="na">Найпопулярніша гра</li>
+                        </ul>
+                        <div class="btn-wrap">
+                           <a href="#" class="btn-buy main-nav">Грай зараз!</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- End Pricing Section -->
+         <!-- ======= F.A.Q Section ======= -->
+         <section id="faq" class="faq">
+            <div class="container">
+               <div class="section-title aos-init" data-aos="fade-up">
+                  <h2>Відповіді на запитання</h2>
+               </div>
+               <div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-lg-5">
+                     <i class="ri-question-line"></i>
+                     <h4>Як поповнити рахунок, а потім вивести виграш?</h4>
+                  </div>
+                  <div class="col-lg-7">
+                     <p>
+                        Всі грошові операції проводяться через електронний гаманець <a href="https://global24.ua/ua">Global24</a>. Зарахування і виплати проводиться адміністратором. Про поповнення рахунку вас сповістить E-mail повідомлення.
+                     </p>
+                  </div>
+               </div>
+               <!-- End F.A.Q Item-->
+               <div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="200">
+                  <div class="col-lg-5">
+                     <i class="ri-question-line"></i>
+                     <h4>Чи є якась достовірна стратегія щоб вигравати більше?</h4>
+                  </div>
+                  <div class="col-lg-7">
+                     <p>
+                        Одним із головних правил виграшу це вчасно зупинитися. Але, якщо ви думаєте, що вигравши всього один раз - це перемога, то ви помиляєтесь! Перемога - це виграти найбільшу кількіть ігор.
+                     </p>
+                  </div>
+               </div>
+               <!-- End F.A.Q Item-->
+               <div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="300">
+                  <div class="col-lg-5">
+                     <i class="ri-question-line"></i>
+                     <h4>Як грати одночасно в декількох кімнатах?</h4>
+                  </div>
+                  <div class="col-lg-7">
+                     <p>
+                        На самому старті гри у вас є можливість грати одночасно в 2 кімнатах, щоб збільшити кількість можливих ігор потрібно запросити друга по реферальному посиланню. Кожні нові 5 друзів - ще одна гра. <b>Створення декількох акаунтів ЗАБОРОНЕНО</b> і карається грошовим штрафом або блокуванням доступу до ресурсу без можливості повернути гроші. Якщо наша адміністрація випатково Вас заблокувала і <em>ви зможете довести, що не має нічого спільного між вами і припущеним акаунтом <b>вам буде начислений бонус</b></em>.
+                     </p>
+                  </div>
+               </div>
+               <!-- End F.A.Q Item-->
+<!--                 придумаю потім
+               <div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="400">
+                  <div class="col-lg-5">
+                     <i class="ri-question-line"></i>
+                     <h4>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h4>
+                  </div>
+                  <div class="col-lg-7">
+                     <p>
+                        Aperiam itaque sit optio et deleniti eos nihil quidem cumque. Voluptas dolorum accusantium sunt sit enim. Provident consequuntur quam aut reiciendis qui rerum dolorem sit odio. Repellat assumenda soluta sunt pariatur error doloribus fuga.
+                     </p>
+                  </div>
+               </div>
+                End F.A.Q Item
+               <div class="row faq-item d-flex align-items-stretch aos-init" data-aos="fade-up" data-aos-delay="500">
+                  <div class="col-lg-5">
+                     <i class="ri-question-line"></i>
+                     <h4>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h4>
+                  </div>
+                  <div class="col-lg-7">
+                     <p>
+                        Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                     </p>
+                  </div>
+               </div> -->
+               <!-- End F.A.Q Item -->
+            </div>
+         </section>
+         <!-- End F.A.Q Section -->
+         <!-- ======= Contact Section ======= -->
+         <section id="contact" class="contact">
+            <div class="container">
+               <div class="section-title aos-init" data-aos="fade-up">
+                  <h2>Зв'яжіться з нами</h2>
+               </div>
+               <div class="row">
+                  <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-delay="100">
+                     <div class="contact-about">
+                        <h3>Magic-Play</h3>
+                        <p>Разом з нашою програмою ви зможете вигравати великі виграші з мінімальним ризиком у ігровому форматі. Для цього потрібно зареєструватися, вибрати рівень гри і оплатити вхід. При цьому кожний запрошений вами друг збільшує ваш шанс на перемогу.</p>
+                        <div class="social-links">
+                           <a href="mailto:info@magic-game.space" class="twitter"><i class="icofont-ui-email"></i></a>
+                           <!-- <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+                           <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                           <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a> -->
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mt-4 mt-md-0 aos-init" data-aos="fade-up" data-aos-delay="200">
+                     <div class="info">
+                        <div>
+                           <i class="ri-map-pin-line"></i>
+                           <p>Kyiv, 01008, Ukraine</p>
+                        </div>
+                        <div>
+                           <i class="ri-mail-send-line"></i>
+                           <p>info@magic-game.space</p>
+                        </div>
+                        <!--<div class="">
+                           <i class="ri-phone-line"></i>
+                           <p>+380 67777 7777</p>
+                        </div>-->
+                     </div>
+                  </div>
+                  <div class="col-lg-5 col-md-12 aos-init" data-aos="fade-up" data-aos-delay="300">
+                     <form action="https://script.google.com/macros/s/AKfycbyABkk0kTD-cAIMc3jdVPk0e7Bn1Jb4S1IX7_8Et0048rO9ZQ/exec" method="GET" role="form" class="php-email-form">
+                        <input type="hidden" name="f" value="m">
+                        <div class="form-group">
+                           <input type="email" class="form-control" name="from" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                           <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                           <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                           <textarea class="form-control" name="m" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                           <div class="validate"></div>
+                        </div>
+                        <div class="mb-3">
+                           <div class="loading">Loading</div>
+                           <div class="error-message">Помилка відправлення</div>
+                           <div class="sent-message">Повідомлення надісланою Дякуємо!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Надіслати повідомлення</button></div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- End Contact Section -->
+      </main>
+      <!-- End #main -->
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+         <div class="container">
+            <div class="row d-flex align-items-center">
+               <div class="col-lg-6 text-lg-left text-center">
+                  <div class="copyright">
+                     © Copyright <strong>Magic-play</strong>. All Rights Reserved
+                  </div>
+                  <div class="credits">
+                     <!-- All the links in the footer should remain intact. -->
+                     <!-- You can delete the links only if you purchased the pro version. -->
+                     <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+                     <a href="#intro" class="scrollto">Головна</a>
+                     <a href="#about" class="scrollto">Про нас</a>
+                     <a href="/privacyPolicy">Privacy Policy</a>
+                     <a href="/ToU">Terms of Use</a>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- End Footer -->
+      <a href="#" class="back-to-top" style="display: inline;"><i class="icofont-simple-up"></i></a>
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/jquery/jquery.min.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+      <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+      <script src="assets/vendor/counterup/counterup.min.js"></script>
+      <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/venobox/venobox.min.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <!-- Template Main JS File -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+      <script src="assets/js/base64.js"></script>
+      <script src="assets/js/API.js"></script>
+      <script src="assets/js/main.js"></script>
+
+   </body>
+</html>

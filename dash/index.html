@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Magic-palay - Account dashboard</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <!-- Custom styles for this template -->
+  <link href="/assets/css/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading bg-dark text-light">Magic-Play </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light"><i class="icofont-home"></i> Головна</a>
+        <a href="rooms" class="list-group-item list-group-item-action bg-light"><i class="icofont-ui-game"></i> Кімнати</a>
+        <a href="referral" class="list-group-item list-group-item-action bg-light"><i class="icofont-people"></i> Реферали</a>
+        <a href="payment" class="list-group-item list-group-item-action bg-light"><i class="icofont-dollar-plus"></i>Поповнення рахунку</a>
+        <a href="faq" class="list-group-item list-group-item-action bg-light"><i class="icofont-support-faq"></i> Надіслати запитання</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand navbar-dark bg-dark border-bottom">
+        <button class="btn btn-info d-md-none" id="menu-toggle">Menu</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="payment"><i class="icofont-dollar-plus"><span id="money">??грн</span></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="logout_dash()" href="#"><i class="icofont-logout"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Magic-Play Dashboard</h1>
+        <br>
+<div class="row mb-3">
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card bg-success text-white h-100">
+                        <div class="card-body bg-success">
+                            <h6 class="text-uppercase"><i class="icofont-ui-game"></i>  Online Games</h6>
+                            <h2 class="display-4"><span id="played-games">?</span> / <span id="avalible-games">?</span><sup><a href="#" data-toggle="tooltip" data-placement="right" title="Кількість можливих одночасних ігор." ><i class="icofont-info-circle"></i></a></sup></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 py-2">
+                  <a href="payment" style="text-decoration: none;">
+                    <div class="card text-white bg-danger h-100">
+                        <div class="card-body bg-danger">
+                            <h6 class="text-uppercase"><i class="icofont-dollar-plus"></i> Money</h6>
+                            <h2 class="display-4"><span id="moneyB">??грн</span></h2>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-xl-3 col-sm-6 py-2">
+                    <div class="card text-white bg-info h-100">
+                        <div class="card-body bg-info">
+                            <h6 class="text-uppercase"><i class="icofont-badge"></i> the won games</h6>
+                            <h2 class="display-4"><span id="gameW">?</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="referral" class="col-xl-3 col-sm-6 py-2">
+                    <div class="card text-white bg-warning h-100">
+                        <div class="card-body">
+                            <h6 class="text-uppercase"><i class="icofont-people"></i> Referals count</h6>
+                            <h2 class="display-4"><span id="referalCount">?</span><sup><a href="#" data-toggle="tooltip" data-placement="right" title="Запроси друзів і получи бонуси" ><i class="icofont-info-circle"></i></a></sup></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="/assets/js/API.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    $('[data-toggle="tooltip"]').tooltip();
+  </script>
+
+</body>
+
+</html>
